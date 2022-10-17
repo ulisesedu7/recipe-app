@@ -27,6 +27,9 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Linters Rubocop
+gem 'rubocop', '>= 1.0', '< 2.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -43,7 +46,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -70,3 +73,25 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# Rspec gems
+gem 'ffi', group: %i[development test]
+gem 'rails-controller-testing', group: %i[development test]
+gem 'rspec-rails', group: %i[development test]
+
+# Passwords helper gem
+gem 'figaro'
+
+# n+1 problems gem helper
+gem 'bullet', group: 'development'
+
+# Integration Tests
+group :development, :test do
+  gem 'database_cleaner'
+end
+
+# Authentication with Devise
+gem 'devise'
+
+# Authorization widh CanCanCan
+gem 'cancancan'
