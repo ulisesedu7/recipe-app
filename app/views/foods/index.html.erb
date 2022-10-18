@@ -1,14 +1,18 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Food</h1>
+<h1>Welcome to the food list of <%= @user.name %></h1>
 
-<div id="foods">
-  <% @foods.each do |food| %>
-    <%= render food %>
-    <p>
-      <%= link_to "Show this food", food %>
-    </p>
+<section id="foods">
+  <% if @foods.empty? %>
+    <h2>There are no foods added to this user</h2>
+  <% else %>
+    <% @foods.each do |food| %>
+      <%= render food %>
+      <p>
+        <%= link_to "Show this food", food %>
+      </p>
+    <% end %>
   <% end %>
-</div>
+</section>
 
 <%= link_to "New food", new_food_path %>
