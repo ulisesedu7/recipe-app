@@ -15,3 +15,7 @@ th,
 td {
   border: 1px solid black;
 }
+
+.food-items-container:nth-child(2n) {
+  background-color: #ccc;
+}
