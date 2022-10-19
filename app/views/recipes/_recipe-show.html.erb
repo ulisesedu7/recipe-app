@@ -1,0 +1,35 @@
+<div>
+
+
+<div class="recipe-card">
+
+<div>
+  <p>
+    <strong>Preparation time (min):</strong>
+    <%= @recipe.preparation_time %>
+  </p>
+
+  <p>
+    <strong>Cooking time (min):</strong>
+    <%= @recipe.cooking_time %>
+  </p>
+</div>
+
+<p>
+    <strong>Public:</strong>
+    <label class="switch">
+      <input type="checkbox" role="switch" <%= 'checked' if @recipe.public %> disabled>
+      <span class="slider round"></span>
+    </label>
+  </p>
+
+</div>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @recipe.description %>
+  </p>
+
+  
+
+</div>
