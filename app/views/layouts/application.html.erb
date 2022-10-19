@@ -12,13 +12,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
   <!-- Personal Styles -->
-  <%= stylesheet_link_tag "application", "foods", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "application", "navbar", "foods", "data-turbo-track": "reload" %>
 </head>
 
 <body>
 
-<header>
-
+<header class="d-flex flex-column justify-content-center align-items-center">
+  <%= render "layouts/navbar" %>
 </header>
 
   <div class="fluid-container d-flex flex-column justify-content-center align-items-center">
