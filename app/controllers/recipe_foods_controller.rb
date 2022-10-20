@@ -3,8 +3,8 @@ class RecipeFoodsController < ApplicationController
   before_action :set_recipe
   before_action :set_user
 
-   # GET /recipe_foods or /recipe_foods.json
-   def index
+  # GET /recipe_foods or /recipe_foods.json
+  def index
     @recipe_foods = RecipeFood.find_by(@recipe).includes(:food)
   end
 

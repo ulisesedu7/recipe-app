@@ -65,7 +65,7 @@ class RecipesController < ApplicationController
     end
   end
 
-  # Shopping List 
+  # Shopping List
   def shopping_list
     @total_value = 0
     recipe = Recipe.find(params[:recipe_id])

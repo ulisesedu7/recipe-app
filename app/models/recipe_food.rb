@@ -15,5 +15,5 @@ class RecipeFood < ApplicationRecord
 
   def process_cost(user_food)
     @cost_required = (process_quantity(user_food) * food.price).round(2)
-  end  
+  end
 end

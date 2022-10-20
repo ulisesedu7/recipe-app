@@ -10,7 +10,7 @@ class FoodsController < ApplicationController
   # GET /foods/1 or /foods/1.json
   def show; end
 
-  # Shopping List 
+  # Shopping List
   def general_shopping_list
     @total_value = 0
     @items_to_buy = 0
@@ -23,7 +23,6 @@ class FoodsController < ApplicationController
       @total_value += recipe_food.process_cost(food)
     end
   end
-  
 
   # GET /foods/new
   def new
