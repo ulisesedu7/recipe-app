@@ -10,9 +10,25 @@ class FoodsController < ApplicationController
   # GET /foods/1 or /foods/1.json
   def show; end
 
+  # Shopping List 
+  def general_shopping_list
+    @total_value = 0
+    @items_to_buy = 0
+    @foods = current_user.foods
+    @foods.each do |food|
+      recipe_food = RecipeFood.find_by(food:)
+      next if recipe_food.nil?
+
+      @items_to_buy += 1 if recipe_food.process_quantity(food).positive?
+      @total_value += recipe_food.process_cost(food)
+    end
+  end
+  
+
   # GET /foods/new
   def new
     @food = Food.new
+    @user = current_user
   end
 
   # GET /foods/1/edit
@@ -21,7 +37,8 @@ class FoodsController < ApplicationController
   # POST /foods or /foods.json
   def create
     @user = current_user
-    @food = @current_user.foods.create(food_params)
+    @food = Food.new(food_params)
+    @food.user = @user
 
     respond_to do |format|
       if @food.save
