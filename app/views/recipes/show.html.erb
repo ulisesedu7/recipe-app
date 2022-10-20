@@ -1,10 +1,25 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @recipe %>
+<div class="page-title">
+  <h1>
+    <%= @recipe.name %>
+  </h1>
+</div>
+
+<div class="recipe-details">
+
+<%= render 'recipe-show' %>
+
+<div class="generate-add-buttons">
+<%= button_to "Generate shopping list", class: 'delete-btn'%>
+<%= button_to "Add ingredient", class: 'delete-btn'%>
+</div>
+
+<hr>
 
 <div>
   <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
   <%= link_to "Back to recipes", recipes_path %>
 
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+  </div>
 </div>
