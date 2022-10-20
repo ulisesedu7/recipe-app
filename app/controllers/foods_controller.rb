@@ -11,9 +11,7 @@ class FoodsController < ApplicationController
   def show; end
 
   # GET Shopping List
-  def shop
-
-  end
+  def shop; end
 
   # GET /foods/new
   def new
