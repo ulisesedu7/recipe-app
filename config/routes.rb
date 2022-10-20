@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :foods
   resources :recipes
 
@@ -12,5 +13,5 @@ Rails.application.routes.draw do
   get get '/shopping_list', to: 'foods#shop'
 
   # Defines the root path route ("/")
-  # root "articles#index"
+  root "recipes#public_recipes"
 end
