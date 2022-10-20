@@ -44,6 +44,17 @@
   margin-right: 20%;
 }
 
+.delete-btn {
+  border: 2px solid black;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgb(241, 237, 241);
+  color: black;
+  text-decoration: none;
+}
+
+
+
 /* Style for public button from here */
 
 /* The switch - the box around the slider */

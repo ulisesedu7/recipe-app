@@ -1,5 +1,9 @@
+<div class="navlogo">
+  <%= image_tag ("logo_recipe3.png"), class: 'logo' %>
+
 <% if user_signed_in? %>
   <nav>
+  
     <ul class="navbar-items">
       <li><%= link_to "Foods", foods_path, class: "navbar-list-item" %></li>
       <li><%= link_to "Recipes", recipes_path, class: "navbar-list-item" %></li>
@@ -11,6 +15,7 @@
       <li><%= link_to "Sign in", new_user_session_path, class: "navbar-list-item" %></li>
       <li><%= button_to 'Sign out', destroy_user_session_path, method: :delete, class:"navbar-list-item navbar-button-link" %></li>
       <li><%= link_to "Account", edit_user_registration_path, class: "navbar-list-item" %></li>
+      <li><p class="navbar-list-item">Current user: <%= current_user.name %></p></li>
     </ul>
   </nav>
 <% else %>
@@ -21,3 +26,4 @@
     </ul>
   </nav>
 <% end %>
+</div>
