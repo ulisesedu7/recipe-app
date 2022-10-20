@@ -1,4 +1,6 @@
 class RecipeFood < ApplicationRecord
+  attr_accessor :quantity_needed, :cost_required
+
   belongs_to :recipe
   belongs_to :food
 
