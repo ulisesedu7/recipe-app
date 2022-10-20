@@ -10,9 +10,6 @@ class FoodsController < ApplicationController
   # GET /foods/1 or /foods/1.json
   def show; end
 
-  # GET Shopping List
-  def shop; end
-
   # GET /foods/new
   def new
     @food = Food.new
