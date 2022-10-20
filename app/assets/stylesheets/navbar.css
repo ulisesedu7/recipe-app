@@ -1,0 +1,31 @@
+nav {
+  background-color: rgb(73, 73, 73);
+  width: 100vw;
+}
+
+.navbar-items {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-items > *:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.navbar-list-item {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-list-item:link,
+.navbar-list-item:visited {
+  color: #fff;
+}
+
+.navbar-list-item:hover {
+  color: rgb(219, 216, 216);
+}
+
+.navbar-list-item:active {
+  color: rgb(192, 192, 192);
+}

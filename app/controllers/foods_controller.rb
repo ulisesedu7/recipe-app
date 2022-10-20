@@ -3,11 +3,15 @@ class FoodsController < ApplicationController
 
   # GET /foods or /foods.json
   def index
-    @foods = Food.all
+    @user = current_user
+    @foods = @user.foods
   end
 
   # GET /foods/1 or /foods/1.json
   def show; end
+
+  # GET Shopping List
+  def shop; end
 
   # GET /foods/new
   def new
@@ -19,7 +23,8 @@ class FoodsController < ApplicationController
 
   # POST /foods or /foods.json
   def create
-    @food = Food.new(food_params)
+    @user = current_user
+    @food = @current_user.foods.create(food_params)
 
     respond_to do |format|
       if @food.save
