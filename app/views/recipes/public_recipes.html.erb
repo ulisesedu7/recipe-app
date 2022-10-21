@@ -24,8 +24,8 @@
 
 <div class="card-content2">
 
-  <p><strong>Total food items:</strong></p>
-  <p><strong>Total price ($):</strong></p>
+  <p><strong>Total food items: </strong><%= recipe.recipe_foods.count %></p>
+  <p><strong>Total price ($): </strong><%= number_to_currency(recipe.total_cost) %></p>
     
   </div>
   
