@@ -36,3 +36,14 @@ nav {
   border: none;
   list-style: none;
 }
+
+.logo {
+  width: 50%;
+}
+
+.navlogo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+}

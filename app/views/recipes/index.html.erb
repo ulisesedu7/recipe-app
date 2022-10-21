@@ -21,7 +21,7 @@
   </h3>
 
 <p>
-<%= button_to "REMOVE", @recipe, method: :delete, class: 'delete-btn'%>
+<%= button_to "REMOVE", recipe_path(recipe.id), method: :delete, class: 'delete-btn'%>
     </p>
 
     <%
