@@ -1,0 +1,21 @@
+.foods-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.food-items-titles {
+  background-color: rgb(109, 109, 109);
+}
+
+.food-items-container,
+tr,
+th,
+td {
+  border: 1px solid black;
+}
+
+.food-items-container:nth-child(2n) {
+  background-color: #ccc;
+}

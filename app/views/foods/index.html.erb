@@ -1,0 +1,28 @@
+<main class="foods-container">
+  <p style="color: green"><%= notice %></p>
+
+  <h1>Welcome to the food list of <%= @user.name %></h1>
+
+  <section id="foods">
+    <% if @foods.empty? %>
+      <h2>There are no foods added to this user</h2>
+    <% else %>
+      <table class="food-items-container">
+        <tr class="food-items-titles">
+          <th>Food</th>
+          <th>Measurement unit</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Edit Food</th>
+          <th>Delete this food</th>
+        </tr>
+
+        <% @foods.each do |food| %>
+          <%= render food %>
+        <% end %>
+      </table>
+    <% end %>
+  </section>
+
+  <%= link_to "New food", new_food_path %>
+</main>

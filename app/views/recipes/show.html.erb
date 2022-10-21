@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="page-title">
+  <h1>
+    <%= @recipe.name %>
+  </h1>
+</div>
+
+<div class="recipe-details">
+
+<%= render 'recipe-show' %>
+
+<hr>
+
+<div>
+  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
+  <%= link_to "Back to recipes", recipes_path %>
+
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="page-title">
+  <h1>Welcome to <%= @current_user.name%>'s Recipes</h1>
+</div>
+
+<% if @recipes.empty? %>
+        <h3>Currently there aren't recipes in the database for this user</h3>
+      <% else %>
+
+<div class="recipe-list">
+
+  <% @recipes.each do |recipe| %>
+    <div class="recipe-card">
+
+      <div class="name-and-remove">
+
+  <h3 class="recipe-name">
+    
+    <%= link_to recipe.name, recipe, class:"link" %>
+  </h3>
+
+<p>
+<%= button_to "REMOVE", recipe_path(recipe.id), method: :delete, class: 'delete-btn'%>
+    </p>
+
+    <%
+=begin%>
+ <% if can? :manage, recipe %>
+      <%= button_to "Delete this recipe", @recipe, method: :delete, class: 'delete-btn'%>
+    <% end %> 
+<%
+=end%>
+
+</div>
+
+
+<p class="recipe-description">
+   
+    <%= link_to recipe.description, recipe, class:"link" %>
+  </p>
+  
+
+
+</div>
+    
+
+  <% end %>
+
+</div>
+<% end %>
+  <%= link_to "Create a new recipe", new_recipe_path %>
+
+
+

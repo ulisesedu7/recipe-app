@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<table class="food-items-container">
+  <tr class="food-items-titles">
+    <th>Food</th>
+    <th>Measurement unit</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Edit Food</th>
+    <th>Delete this food</th>
+  </tr>
+<%= render @food %>
+</table>
+
+<div>
+  <%= link_to "Back to foods", foods_path %>
+</div>

@@ -1,0 +1,10 @@
+<tr id="<%= dom_id food %>" class="single-food">
+  <td><%= food.name %></td>
+  <td><%= food.measurement_unit %></td>
+  <td>$<%= food.price %></td>
+  <td><%= food.quantity %></td>
+  <td><%= link_to "Edit this food", edit_food_path(food) %></td>
+  <td><%= button_to "Destroy this food", food_path(food.id), method: :delete %></td>
+</tr>
+
+<td><%# button_to "Destroy this food", @food, method: :delete %></td>
