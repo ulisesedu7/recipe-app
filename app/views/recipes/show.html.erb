@@ -10,15 +10,6 @@
 
 <%= render 'recipe-show' %>
 
-<div class="generate-add-buttons">
-<%= button_to "Generate shopping list", class: 'delete-btn'%>
-
-<% if can? :manage, @recipe %>
-  <%= link_to "Add ingredient", new_food_path(@recipe.id), class: 'delete-btn'%>
-<% end %>
-
-</div>
-
 <hr>
 
 <div>
